@@ -719,6 +719,39 @@ a.nav-link.btn:hover {
     }
 }
 
+.navbar.scrolled {
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar tetap di atas tanpa geser */
+.navbar {
+  transition: none !important;
+  z-index: 1000;
+}
+
+/* Hindari konten ketutup navbar */
+section:first-of-type {
+  padding-top: 120px; /* sesuaikan tinggi navbar kamu */
+}
+
+
+
+
 
 
 
@@ -730,46 +763,46 @@ a.nav-link.btn:hover {
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#home">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <img src="public/logo kos.jpg" alt="Logo" class="me-2 rounded-circle shadow"
-                        style="height: 100px; width: 100px; object-fit: cover;">
-                    <h4 class="mb-0 align-self-center">
-                        <span class="fw-bold text-primary">GriyaKost88</span>
-                    </h4>
+          <a class="navbar-brand d-flex align-items-center" href="#home">
+            <img src="public/logo kos.jpg" alt="Logo" class="me-2 rounded-circle shadow"
+              style="height: 100px; width: 100px; object-fit: cover;">
+            <h4 class="mb-0 align-self-center">
+              <span class="fw-bold text-primary">GriyaKost88</span>
+            </h4>
+          </a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#rooms">Kamar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#facilities">Fasilitas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#location">Lokasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Kontak</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn px-3 rounded-pill ms-2" href="#contact"
+                  style="background-color: blue; color: white;">
+                  <i class="fas fa-calendar-check me-1"></i>Booking Sekarang
                 </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#rooms">Kamar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#facilities">Fasilitas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#location">Lokasi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Kontak</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn px-3 rounded-pill ms-2" href="#contact"
-                                style="background-color: blue; color: white;">
-                                <i class="fas fa-calendar-check me-1"></i>Booking Sekarang
-                            </a>
-                        </li>
-                    </ul>       
-                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -1568,14 +1601,14 @@ a.nav-link.btn:hover {
         });
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        // window.addEventListener('scroll', function () {
+        //     const navbar = document.querySelector('.navbar');
+        //     if (window.scrollY > 50) {
+        //         navbar.classList.add('scrolled');
+        //     } else {
+        //         navbar.classList.remove('scrolled');
+        //     }
+        // });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
