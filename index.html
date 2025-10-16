@@ -580,101 +580,39 @@ a.nav-link.btn:hover {
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-    /* Navbar Mobile */
-    .navbar {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
+/* Tambahan Responsivitas Lengkap */
 
-    .navbar .navbar-brand img {
-        height: 50px !important;
-        width: 50px !important;
-    }
-
+/* Untuk layar HP kecil (max 576px) */
+@media (max-width: 576px) {
     .navbar .navbar-brand h4 {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
 
-    .navbar-nav {
+    .navbar-nav .nav-link {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
         text-align: center;
-        padding: 1rem 0;
-    }
-
-    .navbar-nav .nav-item {
-        margin-bottom: 0.5rem;
-    }
-
-    .navbar-nav .nav-link.btn {
-        display: inline-block;
-        width: auto;
-    }
-
-    /* Hero Section Mobile */
-    .hero-section {
-        padding-top: 80px;
-        padding-bottom: 2rem;
-    }
-
-    .hero-section .row {
-        min-height: auto !important;
-    }
-
-    .hero-badge {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.75rem;
-    }
-
-    .hero-section h1 {
-        font-size: 1.75rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    .hero-section .lead {
-        font-size: 0.95rem !important;
-        margin-bottom: 1.5rem !important;
+        padding: 2rem 1rem;
     }
 
     .hero-features {
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
 
-    .hero-features .feature-item {
-        font-size: 0.75rem;
+    .hero-badge {
+        font-size: 0.85rem;
         padding: 0.4rem 0.75rem;
     }
 
-    .hero-section .btn-lg {
-        padding: 0.75rem 1.5rem !important;
-        font-size: 1rem !important;
-    }
-
-    .floating-card {
-        display: none;
-    }
-
-    .main-hero-img {
-        max-width: 100%;
+    .floating-stats {
+        position: relative;
+        bottom: auto;
         margin-top: 2rem;
-    }
-
-    /* Room Section Mobile */
-    .room-image {
-        height: 250px;
-    }
-
-    .room-badge .badge {
-        font-size: 0.75rem;
-        padding: 5px 10px;
-        min-width: 120px;
-        height: auto;
-    }
-
-    .room-availability {
-        font-size: 0.7rem;
-        padding: 5px 10px;
     }
 
     .room-content {
@@ -682,273 +620,107 @@ a.nav-link.btn:hover {
     }
 
     .room-title {
-        font-size: 1.125rem;
-    }
-
-    .room-description {
-        font-size: 0.875rem;
+        font-size: 1.25rem;
+        text-align: center;
     }
 
     .room-features {
         grid-template-columns: 1fr;
         gap: 0.5rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .room-features .feature-item {
-        font-size: 0.8rem;
-        padding: 0.625rem;
-    }
-
-    .price-amount {
-        font-size: 1.5rem;
-    }
-
-    .price-period {
-        font-size: 0.875rem;
     }
 
     .room-actions {
         flex-direction: column;
     }
 
-    .btn-book,
-    .btn-detail {
-        width: 100%;
-        font-size: 0.875rem;
+    .price-amount {
+        font-size: 1.5rem;
     }
 
-    /* Facility Section Mobile */
     .facility-card {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
+        padding: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
     }
 
     .facility-icon {
         width: 60px;
         height: 60px;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .facility-title {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .facility-description {
-        font-size: 0.875rem;
-    }
-
-    /* Location Section Mobile */
-    .address-card {
-        padding: 1.25rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-
-    .address-card h4 {
-        font-size: 1.125rem;
-    }
-
-    .address-card .h5 {
-        font-size: 1rem !important;
-    }
-
-    .nearby-places h5 {
-        font-size: 1rem;
-    }
-
-    .nearby-item {
-        font-size: 0.875rem;
-    }
-
-    .map-placeholder {
-        padding: 1.25rem !important;
-    }
-
-    .map-placeholder img {
-        width: 100%;
-        height: auto;
-    }
-
-    .map-actions .btn {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Testimonial Mobile */
-    .testimonial-card {
-        padding: 1.25rem;
-        margin-bottom: 1rem;
-    }
-
-    .testimonial-text {
-        font-size: 0.875rem;
-        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
     }
 
     .author-avatar {
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
     }
 
-    .author-name {
-        font-size: 0.95rem;
+    section {
+        padding: 2.5rem 0;
     }
 
-    /* Contact Section Mobile */
-    .contact-info h3 {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-item {
-        margin-bottom: 1.5rem !important;
-    }
-
-    .contact-item h5 {
-        font-size: 1rem;
-    }
-
-    .contact-item p {
-        font-size: 0.95rem;
-    }
-
-    .quick-actions h5 {
-        font-size: 1rem;
-    }
-
-    .quick-actions .btn {
-        font-size: 0.875rem;
-        padding: 0.5rem 0.875rem;
-    }
-
-    .booking-form {
-        padding: 1.25rem !important;
-        margin-top: 2rem;
-    }
-
-    .booking-form h3 {
-        font-size: 1.25rem;
-    }
-
-    .form-label {
-        font-size: 0.875rem;
-    }
-
-    .form-control,
-    .form-select {
-        font-size: 0.875rem;
-        padding: 0.625rem 0.875rem;
-    }
-
-    /* Footer Mobile */
-    footer {
-        padding: 3rem 0 !important;
-    }
-
-    footer .col-lg-4,
-    footer .col-lg-2,
-    footer .col-lg-3 {
-        margin-bottom: 2rem;
-    }
-
-    footer h5 {
-        font-size: 1.125rem;
-    }
-
-    footer p,
-    footer li,
-    footer span {
-        font-size: 0.875rem;
-    }
-
-    .social-links .btn {
-        width: 40px;
-        height: 40px;
-        font-size: 0.875rem;
-    }
-
-    /* Floating WhatsApp Mobile */
     .floating-whatsapp {
-        bottom: 15px;
         right: 15px;
+        bottom: 15px;
     }
 
     .floating-whatsapp .btn {
         width: 50px;
         height: 50px;
     }
+}
 
-    .whatsapp-tooltip {
-        display: none;
+/* Untuk layar tablet (maksimal 992px) */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0.5rem 1rem;
     }
 
-    /* Section Spacing Mobile */
-    section {
-        padding: 2.5rem 0;
+    .hero-section {
+        text-align: center;
+        padding: 3rem 1rem;
     }
 
-    .display-5 {
-        font-size: 1.5rem !important;
+    .hero-features {
+        justify-content: center;
     }
 
-    .lead {
-        font-size: 0.95rem !important;
+    .room-card {
+        margin-bottom: 2rem;
     }
 
-    .text-center.mb-5 {
-        margin-bottom: 2rem !important;
+    .room-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .room-actions {
+        flex-direction: column;
+    }
+
+    .facility-card,
+    .testimonial-card {
+        margin-bottom: 1.5rem;
     }
 }
 
-/* ========================================
-   EXTRA SMALL MOBILE (Max-width: 480px)
-   ======================================== */
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 1.5rem !important;
-    }
-
-    .hero-features .feature-item {
-        font-size: 0.7rem;
-        padding: 0.35rem 0.65rem;
+/* Untuk layar besar (min 1200px) - jaga proporsi */
+@media (min-width: 1200px) {
+    .hero-section {
+        padding: 6rem 0;
     }
 
     .room-image {
-        height: 200px;
+        height: 350px;
     }
 
-    .facility-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.25rem;
-    }
-
-    .map-actions .btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 0.5rem;
-        margin-right: 0 !important;
+    .room-content {
+        padding: 2.5rem;
     }
 }
 
-/* Landscape Mobile Optimization */
-@media (max-height: 600px) and (orientation: landscape) {
-    .hero-section {
-        padding-top: 70px;
-        padding-bottom: 1rem;
-    }
 
-    .hero-section .row {
-        min-height: auto !important;
-    }
 
-    .floating-card {
-        display: none;
-    }
-}
 
   
     </style>
