@@ -901,6 +901,39 @@ a.nav-link.btn:hover {
         padding: 2.5rem;
     }
 }
+
+/* FIX MOBILE - Hero section tidak tertutup navbar */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px !important;
+  }
+
+  .hero-content {
+    padding-top: 20px !important;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .hero-section .row.align-items-center {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 90px !important;
+  }
+
+  .hero-content {
+    padding-top: 15px !important;
+  }
+
+  .navbar {
+    min-height: 65px;
+  }
+}
     </style>
 </head>
 
